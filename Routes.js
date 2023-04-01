@@ -7,7 +7,6 @@ const jwt = require("jsonwebtoken");
 const FlightModel = require('./models/FlightModel');
 const HotelModel =require('./models/HotelModel');
 const ContactModel =require('./models/ContactModel');
-const { ClassSharp } = require('@mui/icons-material');
 router.post('/register',async (req,res)=>{
     const saltpwd = await bcrypt.genSalt(10);
     const securepassword = await bcrypt.hash(req.body.password,saltpwd);
